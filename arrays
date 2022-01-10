@@ -14,13 +14,15 @@ const example1 = [
         "this is an example"
     ];
     
-    const getCommonChars=(arr:[])=> {
+    const getCommonChars=(arr:string[])=> {
+        const array=[]
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[i].length; j++){
             if(!arr[i][j].startsWith(" "))
             array.push(arr[i][j])
         }
     }
+    return array
 }
 console.log(getCommonChars(example1))
     
@@ -39,7 +41,7 @@ A forest is a group of adjacent trees. Any two trees that are next to each other
 
 Write a function that returns the number of forests in a given array. Here’s a starting template …
 
-const countForest=(arr:[])=> {
+const countForest=(arr:[][])=> {
 let count=0
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[i].length; j++) {
@@ -52,6 +54,7 @@ let count=0
             }
         }
     }
+    return count
 }
 
 console.log(countForest(example1))
