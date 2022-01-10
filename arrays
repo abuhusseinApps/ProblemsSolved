@@ -1,0 +1,48 @@
+Problem 1
+Your are given an array of strings, for example …
+
+const example1 = [
+    "hello world",
+    "this is a test",
+    "this is an example"
+];
+Write a function that returns an array of all characters that occur in all strings. Here’s a starting template …
+
+const example1 = [
+        "hello world",
+        "this is a test",
+        "this is an example"
+    ];
+    let array=[]
+    for (let i = 0; i < example1.length; i++) {
+        for (let j = 0; j < example1[i].length; j++){
+            if(!example1[i][j].startsWith(" "))
+            array.push(example1[i][j])
+        }
+    }
+    console.log(array)
+    
+    
+    Problem 2
+You are given a 2D array of integers depicting a rectangular geographical area. Each cell contains either 0 (an empty land block) or 1 (a tree). For example …
+
+const example1 = [
+	[0, 0, 1, 1, 0, 0],
+	[0, 1, 1, 1, 0, 0],
+	[0, 1, 0, 0, 0, 1],
+	[0, 1, 0, 0, 1, 1],
+	[1, 0, 0, 1, 1, 1],
+];
+A forest is a group of adjacent trees. Any two trees that are next to each other (in any of the eight directions) belong to the same forest.
+
+Write a function that returns the number of forests in a given array. Here’s a starting template …
+
+let count=0
+    for(let i=0 ; i<example1.length;i++){
+        for(let j=0 ; j<example1.length;j++){
+            if(example1[i][j]==1&&example1[i][j]==example1[i][j+1]){
+                count++
+            }
+        }
+    }
+console.log(count,"count")
